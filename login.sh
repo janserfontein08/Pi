@@ -5,8 +5,8 @@
 # Displayed on the the screen
 # This works best on Centos / Redhat 
 
-RELEASE=`head /etc/redhat-release`
 IFS=$'\n'
+RELEASE=`head /etc/redhat-release`
 UPTIME=`uptime`
 D_UP=${UPTIME:1}
 MYGROUPS=`groups`
@@ -16,12 +16,17 @@ CPWD=`pwd`
 ME=`whoami`
 CPU=`arch`
 
+# FYI 
+# \t are for tab spaces
+# \n for new lines
+# \033 are used to change the color of the headings
+
 printf "\033[1;31m <====  SYSTEM ====> \033[0m\n"
-echo   "  Distro info:"$RELEASE""
+printf "  Distro info:\t"$RELEASE"\n"
 printf "  Kernel:\t"$KERNEL"\n"
 printf "  Uptime:\t"$D_UP"\n" 
 printf "  Architecture:\t"$CPU"\n"
-printf "  Date:\t\t"$DATE"\n"
+printf "  Date:\t"$DATE"\n"
 printf "\033[0;32m <====  USER ====> \033[0m\n"
 printf "  User:\t\t"$ME" (uid:"$UID")\n"
 printf "  Groups:\t"$MYGROUPS"\n"
