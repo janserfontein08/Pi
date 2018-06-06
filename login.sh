@@ -1,9 +1,11 @@
 #!/bin/bash
 
+
 # A easy short script that can be placed /etc/bashrc
 # When a user ssh's to the server useful info will be
 # Displayed on the the screen
 # This works best on Centos / Redhat 
+# Please note the bases of this script comes from bash.cyberciti
 
 IFS=$'\n'
 RELEASE=`head /etc/redhat-release`
